@@ -1,0 +1,14 @@
+{
+  "name": "decathlon-monorepo",
+  "private": true,
+  "workspaces": [
+    "packages/decathlon-frontend",
+    "packages/decathlon-backend"
+  ],
+  "scripts": {
+    "start": "npm run dev:backend & npm run dev:frontend",
+    "dev:backend": "npm run dev --workspace=decathlon-backend",
+    "dev:frontend": "npm run dev --workspace=decathlon-frontend",
+    "build:backend": "npm run build --workspace=decathlon-backend"
+  }
+}
